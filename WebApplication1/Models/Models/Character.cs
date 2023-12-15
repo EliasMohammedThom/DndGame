@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace Core.Models
 {
     internal class Character
     {
@@ -16,13 +16,13 @@ namespace Models
         public Stats Stats { get; set; }
         public Inventory Inventory { get; set; }
         public Hitpoints Hitpoints { get; set; }
-        public Character() 
+        public Character()
         {
-        this.Skills = new Skills();
-        this.Stats = new Stats();
-        this.Inventory = new Inventory();
-        this.Hitpoints = new Hitpoints();
-        this.Level = new Level();
+            Skills = new Skills();
+            Stats = new Stats();
+            Inventory = new Inventory();
+            Hitpoints = new Hitpoints();
+            Level = new Level();
         }
 
 

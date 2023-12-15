@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Models
+namespace Core.Models
 {
     public class Stats
     {
@@ -14,7 +14,7 @@ namespace Models
         public int ArmorClass { get; set; }
         public int Initiative { get; set; }
         public int WalkingSpeed { get; set; }
-        
+
 
 
 
