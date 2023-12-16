@@ -1,13 +1,25 @@
 ﻿using Core;
 using System.Reflection.Metadata.Ecma335;
 namespace Application
-  
 {
     public class Rolls
     {
         public Dices Dices { get; set; } = new();
         public int Dice { get; set; } = new();
         public Random Random { get; set; } = new();
+
+        public int RollforStats()
+        {
+            List<int?>? sum = new List<int?>();
+
+            for (int i = 0; i <= 4; i++)
+                sum.Add(RollD6(null));
+
+            sum.Remove(sum.Min());
+
+            
+            return (int)sum.Sum();
+        }
 
         Rolls() { }
 
@@ -49,5 +61,7 @@ namespace Application
             int? roll = Random.Next(1, 3) + modifier;
             return roll;
         }
+
+
     }
 }
